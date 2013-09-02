@@ -83,13 +83,13 @@ Usage
       console.log('Woo, translations!');
       console.log(translations);
     });
-
+    
+For additional available methods, see [Onesky's documentation](http://developer.oneskyapp.com/api).
 
 Documentation
 ----------
 
-Full documentation coming soon. Until then, reference [Onesky's docs](http://developer.oneskyapp.com/api) and the module's source. 
-It should be fairly self-explanatory.
+Coming soon. Until then, skim through the source and reference Onesky's [API docs](http://developer.oneskyapp.com/api). All endpoints and options listed in the official API docs are available in this module, except string/upload and string/download which will be added soon.
 
 Contribute
 ----------
@@ -101,6 +101,7 @@ TODO
 * Add support for the string/upload and string/download API
 * Add tests
 * Parse OneSky's response when approriate. OneSky often returns unnecessary nesting
+* Design a better way of defining API keys to allow use of multiple onesky accounts
 
 Author
 ----------
