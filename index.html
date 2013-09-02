@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Node-onesky by Paton</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Node-onesky</h1>
+        <p>Onesky API for node</p>
+
+        <p class="view"><a href="https://github.com/Paton/node-onesky">View the Project on GitHub <small>Paton/node-onesky</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Paton/node-onesky/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Paton/node-onesky/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Paton/node-onesky">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="onesky-api-for-node" class="anchor" href="#onesky-api-for-node"><span class="octicon octicon-link"></span></a>OneSky API for Node</h1>
+
+<p>This Node.js module provides access to the <a href="http://developer.oneskyapp.com/api">OneSky API</a> for managing website translations.</p>
+
+<p><strong>Warning</strong>: This module is in <em>alpha</em>. Future versions are likely to include breaking changes.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Install via <a href="http://npmjs.org/">npm</a></p>
+
+<pre><code>npm install onesky --save
+</code></pre>
+
+<h2>
+<a name="example-usage" class="anchor" href="#example-usage"><span class="octicon octicon-link"></span></a>Example usage</h2>
+
+<pre><code>var privateKey = 'abc', 
+    publicKey = '123';
+
+var onesky = require('onesky')(privateKey, publicKey);
+</code></pre>
+
+<p><strong>Create project</strong> with base locale <code>en_US</code></p>
+
+<pre><code>onesky.project.add('My app', 'en_US', function(err, data) {
+  console.log('Project created!');
+});
+</code></pre>
+
+<p><strong>Fetch project</strong></p>
+
+<pre><code>onesky.project.details('My app', function(err, data) {
+  console.log('Project name: ' + data.project.name);
+});
+</code></pre>
+
+<p><strong>Add a platform</strong> to a project</p>
+
+<pre><code>onesky.platform.add('My app', { type: 'website' }, function(err, data) {
+  var platformId = data.platform['platform-id'];
+  console.log('New platform id: ' + platformId);
+});
+</code></pre>
+
+<p><strong>Add a phrase</strong> to a platform. Strings parameter can be an object, array of objects, string, or an array of strings</p>
+
+<pre><code>var strings = [{
+  string: 'My webapp is cool',
+  stringKey: 'homepage.webapp_is_cool'
+}, {
+  string: 'Another sentence, without a stringKey'
+}];
+
+onesky.string.input(platformId, strings, function() {
+  console.log('Phrases uploaded!');
+});
+</code></pre>
+
+<p><strong>Order translations</strong></p>
+
+<pre><code>onesky.translate.order({
+  platformId: platformId,
+  agencyId: 5,
+  toLocale: 'es_ES',
+  filter: 'ALL'
+}, function(err) {
+  console.log('Translation order placed!');
+});
+</code></pre>
+
+<p><strong>Fetch translations</strong></p>
+
+<pre><code>onesky.string.output({
+  platformId: platformId,
+  locale: 'es_ES'
+}, function(err, translations) {
+  console.log('Woo, translations!');
+  console.log(translations);
+});
+</code></pre>
+
+<h2>
+<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>Full documentation coming soon. Until then, reference <a href="http://developer.oneskyapp.com/api">Onesky's docs</a> and the module's source. 
+It should be fairly self-explanatory.</p>
+
+<h2>
+<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>Forks and pull requests welcome!</p>
+
+<h2>
+<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
+
+<ul>
+<li>Add support for the string/upload and string/download API</li>
+<li>Add tests</li>
+<li>Parse OneSky's response when approriate. OneSky often returns unnecessary nesting</li>
+</ul><h2>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<p>Brandon Paton. Email me if you have any questions: <a href="mailto:bp@brandonpaton.com">bp@brandonpaton.com</a>.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Paton">Paton</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
