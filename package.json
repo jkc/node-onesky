@@ -1,0 +1,17 @@
+{
+  "author": "Brandon Paton <bp@brandonpaton.com>",
+  "name": "onesky",
+  "description": "Onesky API for node",
+  "version": "0.1",
+  "homepage": "https://github.com/Paton/node-onesky",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Paton/node-onesky.git"
+  },
+  "main": "lib/main.js",
+  "dependencies": {
+    "request": "~2.27.0",
+    "underscore": "~1.5.1",
+  },
+  "devDependencies": {}
+}
