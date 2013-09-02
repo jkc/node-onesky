@@ -15,34 +15,32 @@ Install via [npm](http://npmjs.org/)
 Usage
 ----------
 
-    var privateKey = 'abc', 
-        publicKey = '123';
-        
     var onesky = require('onesky')(privateKey, publicKey);
 
 
+  
+###### Example calls  
+  
+  
+*Note*: All callbacks are passed an error and data argument: `callback(err, data)`.
+
+  
+  
 **Create project** with base locale `en_US`
 
-    onesky.project.add('My app', 'en_US', function(err, data) {
-      console.log('Project created!');
-    });
+    onesky.project.add('My app', 'en_US', callback);
     
     
     
 **Fetch project**
   
-    onesky.project.details('My app', function(err, data) {
-      console.log('Project name: ' + data.project.name);
-    });
+    onesky.project.details('My app', callback);
     
     
     
 **Add a platform** to a project
 
-    onesky.platform.add('My app', { type: 'website' }, function(err, data) {
-      var platformId = data.platform['platform-id'];
-      console.log('New platform id: ' + platformId);
-    });
+    onesky.platform.add('My app', { type: 'website' }, callback);
 
 
 
@@ -55,9 +53,7 @@ Usage
       string: 'Another sentence, without a stringKey'
     }];
 
-    onesky.string.input(platformId, strings, function() {
-      console.log('Phrases uploaded!');
-    });
+    onesky.string.input(platformId, strings, callback);
 
 
 
@@ -68,9 +64,7 @@ Usage
       agencyId: 5,
       toLocale: 'es_ES',
       filter: 'ALL'
-    }, function(err) {
-      console.log('Translation order placed!');
-    });
+    }, callback);
     
     
 
@@ -79,12 +73,9 @@ Usage
     onesky.string.output({
       platformId: platformId,
       locale: 'es_ES'
-    }, function(err, translations) {
-      console.log('Woo, translations!');
-      console.log(translations);
-    });
+    }, callback);
     
-For additional available methods, see [Onesky's documentation](http://developer.oneskyapp.com/api).
+For additional methods, see [Onesky's documentation](http://developer.oneskyapp.com/api).
 
 Documentation
 ----------
