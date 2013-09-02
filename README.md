@@ -1,9 +1,7 @@
 OneSky API for Node
 ===========
 
-This module provides full access to the [OneSky API](http://developer.oneskyapp.com/api).
-
-Onesky is a service for managing translations of websites and mobile apps. 
+This module provides access to the [OneSky API](http://developer.oneskyapp.com/api) for managing website translations.
 
 **Warning**: This module is in *alpha*. Future versions are likely to include breaking changes.
 
@@ -82,8 +80,6 @@ Example usage
       platformId: platformId,
       locale: 'es_ES'
     }, function(err, translations) {
-      if (err) return console.log(err)
-      
       console.log('Woo, translations!');
       console.log(translations);
     });
