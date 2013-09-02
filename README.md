@@ -3,7 +3,7 @@ OneSky API for Node
 
 This Node.js module provides access to the [OneSky API](http://developer.oneskyapp.com/api) for managing website translations.
 
-**Warning**: This module is in *alpha*. Future versions are likely to include breaking changes.
+**Notw**: This module is in *alpha*. Future versions may include breaking changes.
 
 Installation
 ----------
@@ -14,6 +14,8 @@ Install via [npm](http://npmjs.org/)
 
 Usage
 ----------
+
+Initialize onesky with your public and private keys.
 
     var onesky = require('onesky')(privateKey, publicKey);
 
@@ -75,12 +77,7 @@ Usage
       locale: 'es_ES'
     }, callback);
     
-For additional methods, see [Onesky's documentation](http://developer.oneskyapp.com/api).
-
-Documentation
-----------
-
-Coming soon. Until then, skim through the source and reference Onesky's [API docs](http://developer.oneskyapp.com/api). All endpoints and options listed in the official API docs are available in this module, except string/upload and string/download which will be added soon.
+For additional methods, see [Onesky's documentation](http://developer.oneskyapp.com/api). All endpoints and options listed in the official API docs are available here, except string file upload and download which will be added soon.
 
 Contribute
 ----------
