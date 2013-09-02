@@ -12,7 +12,7 @@ Install via [npm](http://npmjs.org/)
 
     npm install onesky --save
 
-Example usage
+Usage
 ----------
 
     var privateKey = 'abc', 
