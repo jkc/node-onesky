@@ -1,4 +1,4 @@
-node-onesky
+OneSky API for Node
 ===========
 
-Onesky API for node
+Will document and publish on npm soon.
