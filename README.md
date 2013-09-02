@@ -1,7 +1,7 @@
 OneSky API for Node
 ===========
 
-This module provides access to the [OneSky API](http://developer.oneskyapp.com/api) for managing website translations.
+This Node.js module provides access to the [OneSky API](http://developer.oneskyapp.com/api) for managing website translations.
 
 **Warning**: This module is in *alpha*. Future versions are likely to include breaking changes.
 
