@@ -8,10 +8,26 @@
     "type": "git",
     "url": "git://github.com/Paton/node-onesky.git"
   },
+  "contributors": [{
+    "name": "Brandon Paton",
+    "email": "bp@brandonpaton.com"
+  }],
+  "keywords": [
+    "translate",
+    "onesky translation",
+    "translations",
+    "onesky",
+    "oneskyapp",
+    "i18n"
+  ],
   "main": "lib/main.js",
   "dependencies": {
     "request": "~2.27.0",
     "underscore": "~1.5.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
 }
