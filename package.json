@@ -3,10 +3,10 @@
   "name": "onesky",
   "description": "Onesky API for node",
   "version": "0.1.0",
-  "homepage": "https://github.com/Paton/node-onesky",
+  "homepage": "https://github.com/paton/node-onesky",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Paton/node-onesky.git"
+    "url": "git://github.com/paton/node-onesky.git"
   },
   "contributors": [{
     "name": "Brandon Paton",
