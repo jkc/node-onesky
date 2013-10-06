@@ -15,7 +15,7 @@ Usage
 
 Initialize onesky with your public and private keys.
 
-    var onesky = require('onesky')(privateKey, publicKey);
+    var onesky = require('onesky')(publicKey, privateKey);
 
 
   
