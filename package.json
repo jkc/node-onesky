@@ -2,7 +2,7 @@
   "author": "Brandon Paton <bp@brandonpaton.com>",
   "name": "onesky",
   "description": "Onesky API for node",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/paton/node-onesky",
   "repository": {
     "type": "git",
@@ -14,6 +14,9 @@
   },{
     "name": "Paulius Uza",
     "email": "pauliusuza@gmail.com"
+  },{
+    "name": "Jason Coble",
+    "email": "jason.k.coble@gmail.com"
   }],
   "keywords": [
     "translate",
